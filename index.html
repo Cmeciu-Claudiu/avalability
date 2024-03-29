@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame Example</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <h1>Calendar disponibilitate instalari</h1>
+    <p>Aceste butoane sunt doar pt test, pot fi inlocuite cu dropdown sau ce se doreste si puse unde se vrea, iar calendarul se v-a pune intr-un element de tip iframe pe pagina pe care se doreste</p>
+    <button id="oradeaCenter">Centru Oradea</button>
+    <button id="bucharestCenter">Centru Bucuresti</button>
+    <button id="iasiCenter">Centru Iasi</button>
+    <button id="craiovaCenter">Centru Craiova</button>
+    <br>
+    <h2>Acesta e un iframe cu latime 60% din pagina curenta</h2>
+    <div class="container">
+        <iframe id="resultFrame" style="width:60%; height:40rem; margin:auto" title="IFrame Example"></iframe>
+    </div>
+    <p>Acesta e un iframe cu latime 40% din pagina curenta</p>
+    <div class="container">
+        <iframe id="resultFrameTwo" style="width:40%; height:40rem; margin:auto" title="IFrame Example"></iframe>
+    </div>
+    <script>
+        document.getElementById('oradeaCenter').addEventListener('click', function() {
+            document.getElementById('resultFrame').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=Bihor';
+            document.getElementById('resultFrameTwo').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=Bihor';
+        });
+        document.getElementById('bucharestCenter').addEventListener('click', function() {
+            document.getElementById('resultFrame').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=București';
+            document.getElementById('resultFrameTwo').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=București';
+        });
+        document.getElementById('iasiCenter').addEventListener('click', function() {
+            document.getElementById('resultFrame').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=Iași';
+            document.getElementById('resultFrameTwo').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=Iași';
+        });
+        document.getElementById('craiovaCenter').addEventListener('click', function() {
+            document.getElementById('resultFrame').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=Dolj';
+            document.getElementById('resultFrameTwo').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=Dolj';
+        });
+    </script>
+</body>
+</html>
