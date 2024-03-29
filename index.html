@@ -12,28 +12,35 @@
         align-items: center;
         justify-content: center;
     }
+
+    .btns {
+        display: flex;
+        justify-content: space-evenly;
+    }
 </style>
 <body class="container">
     <h1>Calendar disponibilitate instalari</h1>
     <p>Aceste butoane sunt doar un exemplu si pot fi inlocuite cu un dropdown cu toate judetele nu doar centrul care se ocupa de judetul respectiv</p>
-    <button id="oradeaCenter">Centru Oradea</button>
-    <button id="bucharestCenter">Centru Bucuresti</button>
-    <button id="iasiCenter">Centru Iasi</button>
-    <button id="craiovaCenter">Centru Craiova</button>
+    <div class="btns">
+        <button id="oradeaCenter">Centru Oradea</button>
+        <button id="bucharestCenter">Centru Bucuresti</button>
+        <button id="iasiCenter">Centru Iasi</button>
+        <button id="craiovaCenter">Centru Craiova</button>
+    </div>
     <br>
         <iframe id="resultFrameTwo" style="width:40%; height:40rem; margin:auto" title="IFrame Example"></iframe>
     <script>
         document.getElementById('oradeaCenter').addEventListener('click', function() {
-            document.getElementById('resultFrameTwo').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=Bihor';
+            document.getElementById('resultFrameTwo').src = 'https://admin.staging.ensys.eu/api/calendar?county=Bihor';
         });
         document.getElementById('bucharestCenter').addEventListener('click', function() {
-            document.getElementById('resultFrameTwo').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=București';
+            document.getElementById('resultFrameTwo').src = 'https://admin.staging.ensys.eu/api/calendar?county=București';
         });
         document.getElementById('iasiCenter').addEventListener('click', function() {
-            document.getElementById('resultFrameTwo').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=Iași';
+            document.getElementById('resultFrameTwo').src = 'https://admin.staging.ensys.eu/api/calendar?county=Iași';
         });
         document.getElementById('craiovaCenter').addEventListener('click', function() {
-            document.getElementById('resultFrameTwo').src = 'http://admin.tehnomir-bitbucket.local/api/calendar?county=Dolj';
+            document.getElementById('resultFrameTwo').src = 'https://admin.staging.ensys.eu/api/calendar?county=Dolj';
         });
     </script>
 </body>
